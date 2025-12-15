@@ -4,7 +4,7 @@ title: Home
 ---
 <section class="hero container" id="about">
   <div class="hero-top">
-    <img src="{{ '/assets/Profilep.jpg' | relative_url }}" alt="Avatar" class="avatar">
+    <img src="{{ 'my-site/assets/images/Profilep.jpg' | relative_url }}" alt="Avatar" class="avatar">
     <div class="hero-content">
       <h2>Hi, I'm Nihad Alakbarli</h2>
     </div>
