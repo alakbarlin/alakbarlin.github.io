@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} — Nihad Alakbarli{% else %}NAlakbarli{% endif %}</title>
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+  {% if page.extra_head %}{{ page.extra_head }}{% endif %}
+</head>
+<body>
+  {% include header.html %}
+  <main>
+    {{ content }}
+  </main>
+  {% include footer.html %}
+  <script src="{{ '/assets/script.js' | relative_url }}" defer></script>
+  <script>
+    // Mobile dropdown toggle
+    const dropdownBtn = document.getElementById('mobile-dropdown')?.querySelector('.mobile-dropdown-btn');
+    const dropdown = document.getElementById('mobile-dropdown');
+    dropdownBtn?.addEventListener('click', function(e) {
+      e.stopPropagation();
+      dropdown.classList.toggle('open');
+    });
+    document.addEventListener('click', function(e) {
+      if (dropdown && dropdown.classList.contains('open')) {
+        if (!dropdown.contains(e.target)) {
+          dropdown.classList.remove('open');
+        }
+      }
+    });
+    // Sync theme toggle state between desktop and mobile
+    const mainSwitch = document.getElementById('theme-switch');
+    const mobileSwitch = document.getElementById('mobile-theme-switch');
+    if (mainSwitch && mobileSwitch) {
+      // Set initial state
+      mobileSwitch.checked = mainSwitch.checked;
+      // Sync both ways
+      mainSwitch.addEventListener('change', () => {
+        mobileSwitch.checked = mainSwitch.checked;
+      });
+      mobileSwitch.addEventListener('change', () => {
+        mainSwitch.checked = mobileSwitch.checked;
+        mainSwitch.dispatchEvent(new Event('change'));
+      });
+    }
+  </script>
+</body>
+</html>

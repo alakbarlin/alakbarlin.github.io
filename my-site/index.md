@@ -1,0 +1,15 @@
+---
+layout: default
+title: Home
+---
+<section class="hero container" id="about">
+  <div class="hero-top">
+    <img src="{{ '/assets/Profilep.jpg' | relative_url }}" alt="Avatar" class="avatar">
+    <div class="hero-content">
+      <h2>Hi, I'm Nihad Alakbarli</h2>
+    </div>
+  </div>
+  <p class="hero-info"> Hello, I'm Nihad. I grew up in Baku, Azerbaijan and I'm a first year at ADA university as an Electrical and Electronics Engineering [BSEEE] student. You can find more information about my background in the about section</p>
+  <p class="hero-info">I am passionate about electronics and eager to enhance my skills in this field.</p>
+  <p class="hero-info">Feel free to explore my projects and gallery to see what I've been working on!</p>
+</section>
