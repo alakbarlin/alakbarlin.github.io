@@ -21,9 +21,17 @@ title: About
       <span class="dropdown-icon">▼</span>
     </button>
     <div class="dropdown-content">
-      <p><strong>ADA University</strong><br>
-      Bachelor of Science in Electrical and Electronics Engineering (BSEEE)<br>
-      2024 - Present</p>
+      <p><strong>Primary & Lower Secondary Education [2013-2021]</strong><br>
+      I completed my primary and lower secondary education between 2013 and 2021 at Azadliq district School No 248 which is built in the honour of N.Narimanov. During these years, I built a strong academic foundation and developed curiosity toward problem-solving and logical thinking. This period played an important role in shaping my discipline, learning habits, and early interest in technology and structured systems.</p>
+      
+      <p><strong>Secondary School [2022]</strong><br>
+      In 2022, I continued my education at a rural school in the Gedebey district. Studying in a different environment helped me adapt quickly, become more independent, and appreciate diverse learning conditions. This experience strengthened my resilience and ability to focus on learning regardless of circumstances.</p>
+      
+      <p><strong>Full Secondary School [2023-2024]</strong><br>
+      And In 2023-2024 - at Novxani district Full Secondary School No1, I became more academically focused and intentional about my future goals. I actively explored my interests in technology, logic, and design, while also improving my communication and critical-thinking skills. This stage marked a transition from general education to a clearer sense of direction.</p>
+      
+      <p><strong>Bachelors degree [2025-...]</strong><br>
+      I am currently studying as an BSEEE student at ADA University, where I am further developing my academic and professional interests in a more competitive environment. Being part of ADA has strengthened my analytical thinking, problem-solving approach, and ability to work independently. Alongside formal education, I actively focus on self-learning, building projects, and refining both technical and design-related skills, aiming to connect theory with real-world applications.</p>
     </div>
   </div>
 
@@ -33,7 +41,10 @@ title: About
       <span class="dropdown-icon">▼</span>
     </button>
     <div class="dropdown-content">
-      <p>Information about volunteering experiences will be added here.</p>
+      <p><strong>Formula 1 Volunteering</strong><br>
+      I volunteered as part of the access control team during a Formula 1 event, where I was responsible for managing entry points, verifying credentials, and ensuring smooth movement of staff and guests. The role required strong attention to detail, teamwork, and the ability to stay focused in a fast-paced, high-pressure environment.<br>
+      <br>
+      Although the work was physically demanding and required long hours, the experience was highly rewarding. Being part of a coordinated team at a world-class international event taught me the importance of responsibility, communication, and reliability. Despite the challenges, the atmosphere of the event was exciting and motivating, making the overall experience both enjoyable and memorable.</p>
     </div>
   </div>
 
