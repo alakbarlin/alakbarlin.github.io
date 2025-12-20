@@ -40,7 +40,7 @@ title: Gallery
       </div>
       <div class="gallery-caption">
         <h3 class="photo-title">The Night Shift</h3>
-        <p class="photo-date">11.07.2025</p>
+        <p class="photo-date">12.17.2025</p>
         <p class="photo-description">Hours before the first light even touched the horizon, the city was already glowing. I'm drawn to this shot because of the silence it represents. While the streets are empty, these windows stay bright, acting as a quiet heartbeat for the campus. It reminded me that the work we do in the dark, when no one is watching, is often what prepares us for the beauty of the morning to come.</p>
       </div>
     </article>
