@@ -877,7 +877,8 @@ body,
 }
 
 .dropdown-section.active .dropdown-content {
-  max-height: 500px;
+  max-height: none;
+  overflow: visible;
   padding: 1.5rem;
 }
 
