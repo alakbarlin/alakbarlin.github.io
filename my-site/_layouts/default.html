@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{% if page.title %}{{ page.title }} — Nihad Alakbarli{% else %}NAlakbarli{% endif %}</title>
   <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+  <script>
+    // Apply theme immediately to prevent flash
+    (function() {
+      try {
+        var savedTheme = localStorage.getItem('site-theme');
+        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('theme-dark');
+        }
+      } catch(e) {}
+    })();
+  </script>
   {% if page.extra_head %}{{ page.extra_head }}{% endif %}
 </head>
 <body>

@@ -6,20 +6,22 @@ document.addEventListener('DOMContentLoaded',function(){
       nav.classList.toggle('show');
     });
   }
-var themeBtn = document.getElementById('theme-toggle');
 var themeCheckbox = document.getElementById('theme-switch');
+var mobileThemeCheckbox = document.getElementById('mobile-theme-switch');
 var root = document.documentElement;
 
-if (themeBtn && themeCheckbox) {
+if (themeCheckbox || mobileThemeCheckbox) {
   var THEME_KEY = 'site-theme';
 
   function applyTheme(theme) {
     if (theme === 'light') {
       root.classList.remove('theme-dark');
-      themeCheckbox.checked = true;
+      if (themeCheckbox) themeCheckbox.checked = true;
+      if (mobileThemeCheckbox) mobileThemeCheckbox.checked = true;
     } else {
       root.classList.add('theme-dark');
-      themeCheckbox.checked = false;
+      if (themeCheckbox) themeCheckbox.checked = false;
+      if (mobileThemeCheckbox) mobileThemeCheckbox.checked = false;
     }
   }
 
@@ -35,11 +37,21 @@ if (themeBtn && themeCheckbox) {
   }
 
   // ---- TOGGLE CHECKBOX ----
-  themeCheckbox.addEventListener('change', function () {
-    const newTheme = themeCheckbox.checked ? 'light' : 'dark';
-    applyTheme(newTheme);
-    try { localStorage.setItem(THEME_KEY, newTheme); } catch (e) {}
-  });
+  if (themeCheckbox) {
+    themeCheckbox.addEventListener('change', function () {
+      const newTheme = themeCheckbox.checked ? 'light' : 'dark';
+      applyTheme(newTheme);
+      try { localStorage.setItem(THEME_KEY, newTheme); } catch (e) {}
+    });
+  }
+
+  if (mobileThemeCheckbox) {
+    mobileThemeCheckbox.addEventListener('change', function () {
+      const newTheme = mobileThemeCheckbox.checked ? 'light' : 'dark';
+      applyTheme(newTheme);
+      try { localStorage.setItem(THEME_KEY, newTheme); } catch (e) {}
+    });
+  }
 
   // ---- RESPOND TO SYSTEM THEME CHANGES ----
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
@@ -49,5 +61,48 @@ if (themeBtn && themeCheckbox) {
       applyTheme(systemTheme);
     }
   });
+}
+
+// About page dropdown sections
+var dropdownBtns = document.querySelectorAll('.dropdown-btn');
+dropdownBtns.forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var section = this.parentElement;
+    section.classList.toggle('active');
+  });
+});
+
+// Project details dropdown with accessibility support
+var projectToggleBtns = document.querySelectorAll('.project-toggle');
+projectToggleBtns.forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    toggleProjectDetails(this);
+  });
+
+  // Keyboard support (Enter/Space)
+  btn.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleProjectDetails(this);
+    }
+  });
+});
+
+function toggleProjectDetails(btn) {
+  var projectId = btn.getAttribute('data-project');
+  var projectDetails = document.getElementById(projectId);
+  var isExpanded = btn.getAttribute('aria-expanded') === 'true';
+  
+  if (projectDetails) {
+    if (isExpanded) {
+      // Close
+      projectDetails.setAttribute('hidden', '');
+      btn.setAttribute('aria-expanded', 'false');
+    } else {
+      // Open
+      projectDetails.removeAttribute('hidden');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  }
 }
 });
