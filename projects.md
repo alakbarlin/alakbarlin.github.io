@@ -7,7 +7,7 @@ title: Projects
   <p class="lead">Selected projects and case studies.</p>
   <div class="projects-grid">
     <article class="project-card">
-      <img src="{{ '/assets/images/logicgates.png' | relative_url }}" alt="Logic gates project demonstration" class="project-media">
+      <img src="{{ '/assets/images/logicgates_v2.png' | relative_url }}" alt="Logic gates project demonstration" class="project-media">
       <div class="project-header">
         <h3>How does hardware work?</h3>
         <p class="project-summary">A hands-on electronics project demonstrating the implementation and testing of fundamental logic gates.</p>
@@ -62,7 +62,7 @@ title: Projects
       </div>
     </article>
     <article class="project-card">
-      <img src="{{ '/assets/images/hourofai.jpeg' | relative_url }}" alt="Hour Of AI project presentation" class="project-media">
+      <img src="{{ '/assets/images/hourofai_v2.jpeg' | relative_url }}" alt="Hour Of AI project presentation" class="project-media">
       <div class="project-header">
         <h3>Hour Of AI</h3>
         <p class="project-summary">An educational initiative at a local school explaining Microsoft Bug Arena and AI bug detection concepts.</p>
@@ -117,7 +117,7 @@ title: Projects
       </div>
     </article>
     <article class="project-card">
-      <img src="{{ '/assets/images/katana.jpg' | relative_url }}" alt="Cardboard Katana craft" class="project-media">
+      <img src="{{ '/assets/images/katana_v2.jpg' | relative_url }}" alt="Cardboard Katana craft" class="project-media">
       <div class="project-header">
         <h3>Cardboard Katana</h3>
         <p class="project-summary">A Japanese katana replica constructed entirely from cardboard boxes. One of my most detailed creative masterpieces.</p>

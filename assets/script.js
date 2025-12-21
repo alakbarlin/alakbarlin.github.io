@@ -105,4 +105,39 @@ function toggleProjectDetails(btn) {
     }
   }
 }
+
+// Scroll-based reveal animations (lightweight, respects reduced motion)
+(function() {
+  var prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealTargets = document.querySelectorAll('.hero, .project-card, .gallery-item, .dropdown-section, .site-footer');
+
+  if (!revealTargets.length) return;
+
+  if (prefersReduce || typeof IntersectionObserver === 'undefined') {
+    revealTargets.forEach(function(el){
+      el.classList.add('reveal-fade-up', 'is-visible');
+    });
+    return;
+  }
+
+  revealTargets.forEach(function(el) {
+    el.classList.add('reveal-fade-up');
+  });
+
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -10% 0px'
+  });
+
+  revealTargets.forEach(function(el){
+    observer.observe(el);
+  });
+})();
 });

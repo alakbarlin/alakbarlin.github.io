@@ -12,7 +12,7 @@ title: Gallery
     <!-- Week 1 Photo -->
     <article class="gallery-item">
       <div class="gallery-image-wrapper">
-        <img src="{{ '/assets/images/Golden light.jpg' | relative_url }}" alt="Week 3 favorite photograph" class="gallery-image">
+        <img src="{{ '/assets/images/Golden light_v2.jpg' | relative_url }}" alt="Week 3 favorite photograph" class="gallery-image">
       </div>
       <div class="gallery-caption">
         <h3 class="photo-title">First Light</h3>
@@ -24,7 +24,7 @@ title: Gallery
     <!-- Week 2 Photo -->
     <article class="gallery-item">
       <div class="gallery-image-wrapper">
-        <img src="{{ '/assets/images/rainyday.jpg' | relative_url }}"  class="gallery-image">
+        <img src="{{ '/assets/images/rainyday_v2.jpg' | relative_url }}"  class="gallery-image">
       </div>
       <div class="gallery-caption">
         <h3 class="photo-title">After the Rain</h3>
@@ -36,7 +36,7 @@ title: Gallery
     <!-- Week 3 Photo -->
     <article class="gallery-item">
       <div class="gallery-image-wrapper">
-        <img src="{{ '/assets/images/nighttime.jpg' | relative_url }}"  class="gallery-image">
+        <img src="{{ '/assets/images/nighttime_v2.jpg' | relative_url }}"  class="gallery-image">
       </div>
       <div class="gallery-caption">
         <h3 class="photo-title">The Night Shift</h3>
